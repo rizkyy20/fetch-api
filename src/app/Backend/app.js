@@ -1,14 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.get('/', (req, res) => {
    res.send('Hello World!!');
-})
-
-app.get('/login', (req, ress) => {
-   console.log(result)
-   res.send('tes')
 })
 
 app.listen(port, () => {
