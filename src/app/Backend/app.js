@@ -1,13 +1,17 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
    res.send('Hello World!!');
 })
 
 app.post('/tes', (req, res) => {
-   const data = req.body;
+   console.log({ requestFromOutside: req.body })
+   const data = req.body.username;
    res.send('tes-api');
 })
 
