@@ -5,7 +5,7 @@ const { DataTypes } = Sequelize;
 
 const Users = db.define('users',{
     role:{
-        type: DataTypes.STRING
+        type: DataTypes.ENUM('guru', 'murid')
     },
     name:{
         type: DataTypes.STRING
@@ -22,5 +22,6 @@ const Users = db.define('users',{
 },{
     freezeTableName:true
 });
+
 
 export default Users;
