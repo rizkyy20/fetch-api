@@ -4,6 +4,9 @@ import db from "../config/Database.js";
 const { DataTypes } = Sequelize;
 
 const Users = db.define('users',{
+    role:{
+        type: DataTypes.STRING
+    },
     name:{
         type: DataTypes.STRING
     },
